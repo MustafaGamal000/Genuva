@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Login">
+
+        <TextView
+            android:id="@+id/genuvaApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/genuvaApp"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#0000"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/email_loginPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/password_loginPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/lock"
+                    android:drawableLeft="@drawable/lock"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/login_btn_loginPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round_btn"
+                    android:ems="14"
+                    android:text="@string/login"
+                    android:textColor="@color/btn_font" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/forgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forget"
+                android:textColor="@color/blue"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/donnot"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/signUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/login_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/google_btn"
+                android:drawableStart="@drawable/ic_google_search"
+                android:drawableLeft="@drawable/ic_google_search"
+                android:ems="18"
+                android:padding="10dp"
+                android:text="@string/login_with_google"
+                android:textColor="@color/btn_font"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/login_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/phone_btn"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawableLeft="@drawable/ic_phone"
+                android:ems="18"
+                android:padding="10dp"
+                android:text="@string/login_with_Number"
+                android:textColor="@color/btn_font"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/userNumberLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="14"
+                android:inputType="text"
+                android:hint="@string/enter_your_number"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/sendVerificationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_btn"
+                android:text="@string/send_code"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/verificationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="14"
+                android:hint="@string/enter_verification_code"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/checkVerificationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_btn"
+                android:padding="8dp"
+                android:text="@string/check_and_sign_in"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/login_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/facebook_btn"
+                android:drawableStart="@drawable/ic_facebook"
+                android:drawableLeft="@drawable/ic_facebook"
+                android:ems="18"
+                android:padding="10dp"
+                android:text="@string/login_with_Facebook"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
